@@ -3,12 +3,12 @@ package Course_Work_1;
 public class Employee {
     private String name;
     private int department;
-    private double salary;
-    private double id;
-    private double counter;
+    private int salary;
+    private int id;
+    private static int counter = 1;
 
 
-    public Employee(String name, int department, double salary) {
+    public Employee(String name, int department, int salary) {
         this.name = name;
         this.department = department;
         this.salary = salary;
@@ -19,7 +19,7 @@ public class Employee {
         return name;
     }
 
-    public double getSalary() {
+    public int getSalary() {
         return salary;
     }
 
@@ -27,25 +27,20 @@ public class Employee {
         return department;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public void setDepartment(int department) {
         this.department = department;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(int salary) {
         this.salary = salary;
     }
 
     public String toString() {
-        return "Ф.И.О. " + name + ", отдел " + department + ", зарплата " + salary;
+        return "id " + id + " Ф.И.О. " + name + ", отдел " + department + ", зарплата " + salary;
     }
-    public static void listPrint(Employee employee[]) {
-        for (int index = 0; index < employee.length; index++) {
-            if (index == employee.length - 1) {
-                System.out.println(employee[index]);
-                break;
-            }
-            System.out.println(employee[index] + " ");
-        }
 
-    }
 }
